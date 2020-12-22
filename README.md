@@ -5,7 +5,7 @@ Validator for ecuadorian CI.
 composer require backfron/cedula-ecuador
 ```
 ## Usage
-```
+```php
 use  \Backfron\CedulaEcuador\Cedula;
 
 $cedula = new Cedula('1234567890');
