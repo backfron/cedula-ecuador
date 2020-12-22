@@ -1,0 +1,34 @@
+{
+    "name": "backfron/cedula-ecuador",
+    "description": "Package to obtain information on identification numbers of Ecuador.",
+    "type": "library",
+    "keywords": [
+        "cedula",
+        "dni",
+        "ecuador",
+        "validar",
+        "validation"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jairo",
+            "email": "jago86@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Backfron\\CedulaEcuador\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "sempro/phpunit-pretty-print": "^1.3"
+    }
+}

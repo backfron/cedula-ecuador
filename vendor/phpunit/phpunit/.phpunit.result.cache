@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":302:{a:2:{s:7:"defects";a:2:{s:55:"Tests\CedulaTest::testCanBeCreatedFromValidEmailAddress";i:3;s:46:"Tests\CedulaTest::can_recognize_a_valid_cedula";i:4;}s:5:"times";a:2:{s:55:"Tests\CedulaTest::testCanBeCreatedFromValidEmailAddress";d:0.002;s:46:"Tests\CedulaTest::can_recognize_a_valid_cedula";d:0.004;}}}
