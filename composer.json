@@ -1,6 +1,6 @@
 {
     "name": "backfron/cedula-ecuador",
-    "description": "Package to obtain information on identification numbers of Ecuador.",
+    "description": "Package to validate and obtain information on ecuadorian CI.",
     "type": "library",
     "keywords": [
         "cedula",
