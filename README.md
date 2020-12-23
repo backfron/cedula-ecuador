@@ -1,10 +1,14 @@
 # Cédulas Ecuador
 Validator for ecuadorian CI.
+
 ## Instalation
 ```
 composer require backfron/cedula-ecuador
 ```
+
 ## Usage
+You may initialize a new Cedula object providing the CI number as a `string`. Is important that you provide a `string` because some CI numbers start with a 0.
+
 ```php
 use  \Backfron\CedulaEcuador\Cedula;
 
@@ -20,6 +24,16 @@ if($cedula->isValid()) {
 } else {
     echo "The number is invalid";
 }
+```
+
+### Obtaining info
+You can also get the province where the CI was issued.
+
+```php
+use  \Backfron\CedulaEcuador\Cedula;
+
+$cedula = new Cedula('1003495585');
+$cedula->getProvince(); // Imbabura
 ```
 
 ## Tests

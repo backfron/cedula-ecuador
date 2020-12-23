@@ -62,4 +62,17 @@ class CedulaTest extends TestCase
         $cedula = new Cedula('1306952100');
         $this->assertEquals('Manabí', $cedula->getProvince());
     }
+
+    /** @test */
+    public function throw_an_exception_if_no_string_is_given_to_the_constructor()
+    {
+        try {
+            $cedula = new Cedula(['1003495585']);
+        } catch (\InvalidArgumentException $th) {
+            $this->assertTrue(true);
+            return;
+        }
+
+        $this->fail("An exeption should be thrown if constructor don't receive a string.");
+    }
 }
