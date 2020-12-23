@@ -66,8 +66,8 @@ class Cedula
      */
     public function __construct($number)
     {
-        if (gettype($number !== 'string')) {
-            throw new \InvalidArgumentException("The CI number must be a string value");
+        if (gettype($number)  !== 'string') {
+            throw new \InvalidArgumentException("The CI number must be a string.");
         }
 
         $this->number = $number;
