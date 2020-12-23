@@ -7,8 +7,9 @@ use Backfron\CedulaEcuador\Cedula;
 abstract class Checker
 {
     protected $cedula;
+
     /**
-     * Undocumented function
+     * Checker constructor
      *
      * @param Cedula $cedula
      */
@@ -17,5 +18,10 @@ abstract class Checker
         $this->cedula = $cedula;
     }
 
+    /**
+     * The checker implementation
+     *
+     * @return boolean
+     */
     abstract public function check();
 }

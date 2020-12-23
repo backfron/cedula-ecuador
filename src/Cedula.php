@@ -8,6 +8,11 @@ use Backfron\CedulaEcuador\Checkers\CheckVerificationDigit;
 
 class Cedula
 {
+    /**
+     * All provinces of Ecuador
+     *
+     * @var array
+     */
     protected $provinces = [
         '01' => 'Azuay',
         '02' => 'Bolivar',
@@ -36,19 +41,39 @@ class Cedula
         '30' => 'Registrado en el exterior',
     ];
 
+    /**
+     * The CI number
+     *
+     * @var string
+     */
     public $number;
 
+    /**
+     * The checkers to validate the CI
+     *
+     * @var array
+     */
     protected $checkers = [
         CheckNumberOfDigits::class,
         CheckValidRegion::class,
         CheckVerificationDigit::class,
     ];
 
+    /**
+     * Cedula constructor
+     *
+     * @param string $number
+     */
     public function __construct($number)
     {
         $this->number = $number;
     }
 
+    /**
+     * Determines if the CI number is valid
+     *
+     * @return boolean
+     */
     public function isValid()
     {
         foreach ($this->checkers as $checker) {
@@ -60,6 +85,11 @@ class Cedula
         return true;
     }
 
+    /**
+     * Gets the province of the CI
+     *
+     * @return string
+     */
     public function getProvince()
     {
         return $this->provinces[substr($this->number, 0, 2)];
