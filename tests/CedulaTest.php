@@ -46,4 +46,20 @@ class CedulaTest extends TestCase
 
         $this->assertFalse($cedula->isValid());
     }
+
+    /** @test */
+    public function can_obtain_information_about_the_ci()
+    {
+        $cedula = new Cedula('1003495585');
+        $this->assertEquals('Imbabura', $cedula->getProvince());
+
+        $cedula = new Cedula('0923681191');
+        $this->assertEquals('Guayas', $cedula->getProvince());
+
+        $cedula = new Cedula('1713175071');
+        $this->assertEquals('Pichincha', $cedula->getProvince());
+
+        $cedula = new Cedula('1306952100');
+        $this->assertEquals('Manabí', $cedula->getProvince());
+    }
 }
